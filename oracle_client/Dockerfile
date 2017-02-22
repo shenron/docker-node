@@ -10,6 +10,7 @@ COPY /conf/oracle /opt/oracle
 RUN cd /opt/oracle && \
   unzip ./instantclient-basic-linux.x64-12.1.0.2.0.zip -d ./unzip && \
   unzip ./instantclient-sdk-linux.x64-12.1.0.2.0.zip -d ./unzip && \
+  rm ./instantclient-basic-linux.x64-12.1.0.2.0.zip ./instantclient-sdk-linux.x64-12.1.0.2.0.zip ./instantclient-sqlplus-linux.x64-12.1.0.2.0.zip &&\
   mv ./unzip/instantclient_12_1 ./unzip/instantclient
 
 # Create environment variables to npm oracle dependencies
