@@ -16,7 +16,7 @@ RUN cd /opt/oracle && \
 # Create environment variables to npm oracle dependencies
 ENV OCI_LIB_DIR="/opt/oracle/unzip/instantclient"
 
-RUN ln -s $OCI_LIB_DIR/libclntsh.so.12.2 $OCI_LIB_DIR/libclntsh.so
+RUN ln -s $OCI_LIB_DIR/libclntsh.so.12.1 $OCI_LIB_DIR/libclntsh.so
 
 ENV LD_LIBRARY_PATH="/opt/oracle/unzip/instantclient"
 
