@@ -1,4 +1,4 @@
-FROM node:10.14
+FROM node:10.16
 
 RUN apt-get update && apt-get install -y \
   unzip \
@@ -8,15 +8,13 @@ COPY /conf/oracle /opt/oracle
 
 # Install oracle client dependencies
 RUN cd /opt/oracle && \
-  unzip ./instantclient-basic-linux.x64-12.2.0.1.0.zip -d ./unzip && \
-  unzip ./instantclient-sdk-linux.x64-12.2.0.1.0.zip -d ./unzip && \
-  rm ./instantclient-basic-linux.x64-12.2.0.1.0.zip ./instantclient-sdk-linux.x64-12.2.0.1.0.zip ./instantclient-sqlplus-linux.x64-12.2.0.1.0.zip &&\
-  mv ./unzip/instantclient_12_2 ./unzip/instantclient
+  unzip ./instantclient-basiclite-linux.x64-19.3.0.0.0dbru.zip -d ./unzip && \
+  unzip ./instantclient-sdk-linux.x64-19.3.0.0.0dbru.zip -d ./unzip && \
+  rm ./instantclient-basiclite-linux.x64-19.3.0.0.0dbru.zip instantclient-sdk-linux.x64-19.3.0.0.0dbru.zip &&\
+  mv ./unzip/instantclient_19_3 ./unzip/instantclient
 
 # Create environment variables to npm oracle dependencies
 ENV OCI_LIB_DIR="/opt/oracle/unzip/instantclient"
-
-RUN ln -s $OCI_LIB_DIR/libclntsh.so.12.1 $OCI_LIB_DIR/libclntsh.so
 
 ENV LD_LIBRARY_PATH="/opt/oracle/unzip/instantclient"
 
