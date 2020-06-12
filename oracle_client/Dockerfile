@@ -1,4 +1,4 @@
-FROM node:12.16
+FROM node:12.18
 
 RUN apt-get update && apt-get install -y \
   unzip \
