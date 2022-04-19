@@ -4,9 +4,7 @@ ARG NODE_VERSION=16.14.2
 FROM node:$NODE_VERSION AS builder_driver
 
 RUN apt-get update && apt-get install -y \
-  unzip \
-  libaio1 \
-  libaio-dev
+  unzip
 
 COPY /conf/oracle /opt/oracle
 
@@ -27,6 +25,10 @@ RUN /opt/oracle/build_node_oracledb.sh
 
 # final stage
 FROM node:$NODE_VERSION
+
+RUN apt-get update && apt-get install -y \
+  libaio1 \
+  libaio-dev
 
 RUN mkdir /opt/oracle
 
