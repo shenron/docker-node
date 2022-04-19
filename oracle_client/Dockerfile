@@ -5,6 +5,7 @@ FROM node:$NODE_VERSION AS builder_driver
 
 RUN apt-get update && apt-get install -y \
   unzip \
+  libaio1 \
   libaio-dev
 
 COPY /conf/oracle /opt/oracle
