@@ -14,3 +14,5 @@ The [oracledb](https://www.npmjs.com/package/oracledb) is not available for arm6
 ```
 npm i /opt/oracle/oracledb.tgz
 ```
+
+[example](./oracle_client/example)

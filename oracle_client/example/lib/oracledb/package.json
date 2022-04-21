@@ -1,0 +1,8 @@
+{
+  "name": "oracledb",
+  "version": "5.3.0",
+  "description": "Mock of oracledb to be able to build/lint without error",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
+}
