@@ -4,8 +4,10 @@ It's still not possible to run natively `oracledb` on M1. But it works on `arm64
 The idea of this project is to run the application with docker and be able to use devDependencies like eslint, tsc etc... on the host machine.
 To achieve this, `oracledb` is mocked on the host machine.
 
-# install 
+# host install 
 > npm ci
+
+> npm run lint
 
 # run with docker
 ```bash
