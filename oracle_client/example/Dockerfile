@@ -28,6 +28,6 @@ COPY . /usr/src/app/
 
 WORKDIR /usr/src/app
 
-CMD node index.js
+CMD node src/index.js
 
 EXPOSE 1337

@@ -9,10 +9,10 @@
     "lint:fix": "eslint --fix src"
   },
   "devDependencies": {
+    "oracledb": "file:lib/oracledb",
     "eslint": "^8.13.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "oracledb": "file:lib/oracledb"
+    "eslint-plugin-import": "^2.26.0"
   },
   "peerDependencies": {
     "oracledb": "^5.3.0"
