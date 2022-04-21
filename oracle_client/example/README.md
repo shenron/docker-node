@@ -1,7 +1,7 @@
 # oracledb consumer on arm machine
 
 It's still not possible to run natively `oracledb` on M1. But it works on `arm64` under linux.
-The idea of this project is to run the application witch docker and be able to use devDependencies like eslint, tsc etc... on the host machine.
+The idea of this project is to run the application with docker and be able to use devDependencies like eslint, tsc etc... on the host machine.
 To achieve this, `oracledb` is mocked on the host machine.
 
 # install 
