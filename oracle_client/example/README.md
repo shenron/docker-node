@@ -1,6 +1,6 @@
 # oracledb consumer on arm machine
 
-It's still not possible to install `oracledb` (without Rosetta) on M1. But it works on `arm64` under linux.
+It's still not possible to install `oracledb` (without Rosetta) on M1. But it works on `arm64` on linux.
 The idea of this project is to run the application with docker and be able to use devDependencies like eslint, tsc etc... on the host machine.
 To achieve this, `oracledb` is mocked on the host machine.
 
