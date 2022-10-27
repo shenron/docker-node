@@ -1,3 +1,3 @@
-FROM node:16.14-alpine
+FROM node:18.12-alpine
 
 RUN apk add --update make grep

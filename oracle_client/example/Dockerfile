@@ -1,4 +1,4 @@
-ARG NODE_VERSION=16.14
+ARG NODE_VERSION=18.12
 
 FROM ghcr.io/shenron/node-oracle-client:$NODE_VERSION
 

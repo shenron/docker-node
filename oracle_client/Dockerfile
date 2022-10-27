@@ -1,5 +1,5 @@
 # oracle client builder
-ARG NODE_VERSION=16.14.2
+ARG NODE_VERSION=18.12
 
 FROM node:$NODE_VERSION AS builder_driver
 
