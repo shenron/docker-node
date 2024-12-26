@@ -1,4 +1,4 @@
-ARG NODE_VERSION=18.12
+ARG NODE_VERSION=22.12
 
 FROM ghcr.io/shenron/node-oracle-client:$NODE_VERSION
 
@@ -18,9 +18,7 @@ RUN echo "engine-strict=true" > /tmp/app/.npmrc
 COPY package.json /tmp/app/package.json
 
 RUN cd /tmp/app && \
-  sed -i '/"oracledb"/d' package.json && \
-  npm i /opt/oracle/oracledb.tgz && \
-  npm i && \
+  npm ci && \
   mv ./node_modules/ /usr/src/app/ && \
   mv package.json /usr/src/app/
 
